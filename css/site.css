@@ -1,0 +1,180 @@
+:root {
+    --color-red-dark: #c92a2a;
+    --color-red-light: #f03e3e;
+    --color-gray-dark: #2f3640;
+    --color-gray-light: #353b48;
+    --color-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-gray-dark);
+    font-size: 1rem;
+    color: var(--color-white);
+}
+
+/* header style start ------------------------------------------------------- */
+header{
+    background-color: var(--color-gray-dark);
+}
+.hge_logo {
+    color: var(--color-red-dark);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.hge_logo:hover {
+    color: var(--color-red-light);
+}
+
+.hge_logo sub {
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+#navbar>ul>li>a {
+    color: var(--color-white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#navbar>ul>li>a.active {
+    color: var(--color-red-light);
+}
+
+#navbar>ul>li>a:hover {
+    color: var(--color-red-light);
+}
+
+.btn_login {
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    border: 1px solid var(--color-red-light);
+    text-transform: uppercase;
+}
+
+.btn_login:hover {
+    background-color: var(--color-red-light);
+}
+
+.menu_toggler {
+    background-color: var(--color-red-dark);
+    outline: none;
+}
+
+.menu_toggler:hover {
+    background-color: var(--color-red-light);
+}
+
+.navbar-toggler-icon {
+    color: var(--color-white);
+}
+
+/* header style end  ------------------------------------------------------- */
+.btn_orange {
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    /* border: 1px solid var(--color-red-light); */
+    text-transform: capitalize;
+    outline: none;
+}
+
+.btn_orange:hover {
+    background-color: var(--color-red-light);
+}
+/* home style starts  ------------------------------------------------------- */
+.home_contents>h1 {
+    color: var(--color-red-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.home_contents>h3 {
+    color: var(--color-white);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.home_contents>a {
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+}
+
+.home_contents>a:hover {
+    background-color: var(--color-red-light);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-red-light);
+}
+
+.carousel-control-next_svg {
+    fill: var(--color-red-dark);
+}
+
+/* home style end  ------------------------------------------------------- */
+
+/* feature products start  ------------------------------------------------------- */
+.feature_products{
+    margin: 1.5rem auto;
+    padding:1.5rem;
+    background-color: var(--color-gray-light);
+}
+.feature_products h1{
+    margin: 2rem auto;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+.feature_products_content{
+    background-color: var(--color-gray-dark);
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.feature_products_content > h3{
+    color: var(--color-red-light);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+
+}
+.feature_products_content > h4{
+    color:var(--color-white);
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.feature_products_content > ul{
+    list-style:square;
+    font-size: 1rem;
+}
+/* feature products end  ------------------------------------------------------- */
+
+/* Onlin Visitor Count start */
+.count_container{
+    margin: 2rem auto;
+}
+.count_item{
+    text-align: center;
+}
+.count_item > h3{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--color-red-dark);
+}
+.count_item > span{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+/* Onlin Visitor Count end */
