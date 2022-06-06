@@ -4,6 +4,7 @@
     --color-gray-dark: #2f3640;
     --color-gray-light: #353b48;
     --color-white: #fff;
+    --color-white-dark:#adb5bd;
 }
 
 * {
@@ -180,14 +181,17 @@ header {
 }
 
 .count_item>h3 {
-    font-size: 2.5rem;
-    font-weight: bolder;
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--color-red-dark);
 }
 
 .count_item>span {
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1rem;
+}
+
+.count_item>span>i {
+    color: var(--color-red-light);
 }
 
 /* Onlin Visitor Count end */
@@ -195,8 +199,7 @@ header {
 /* google map start */
 .google_map {
     background-color: var(--color-gray-light);
-    margin: 2rem auto;
-    padding: 3rem;
+    margin: 1rem auto;
 }
 
 .google_map>h1 {
@@ -218,10 +221,12 @@ header {
     height: 100%;
     width: 100%;
 }
-.gmap_canvas > iframe{
+
+.gmap_canvas>iframe {
     width: 100%;
     height: 50vh;
 }
+
 .gym_info {
     margin: 1rem auto;
     background-color: var(--color-gray-dark);
@@ -247,56 +252,102 @@ header {
 /* google map end */
 
 
+/* blogs start */
+.blogs{
+    padding-bottom: 1.5rem;
+}
+.blogs > h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.5rem;
+}
+.blog_content > h3{
+    font-size: 1rem;
+    color: var(--color-red-light);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.blog_content > span{
+    font-size: 0.7rem;
+    color: var(--color-white-dark);
+}
+.blog_content > .img-thumbnail{
+    background-color: var(--color-gray-light) !important;
+    border: none;
+}
+.blog_content > p{
+    color: var(--color-white-dark);
+}
+/* blogs end */
+
 /* footer start */
-.footer_logo > h1{
+.footer{
+    background-color: var(--color-gray-light);
+    margin-top: 1.5rem auto;
+    padding-top: 1.5rem;
+}
+.footer_logo>h1 {
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-red-dark);
     text-transform: uppercase;
 }
-.footer_logo > h1 > sub{
+
+.footer_logo>h1>sub {
     color: var(--color-white);
     font-size: 0.7rem;
     font-weight: normal;
     text-transform: capitalize;
 }
-.footer_pages > h1,
-.quick_link > h1,
-.social_links > h1{
+
+.footer_pages>h1,
+.quick_link>h1,
+.social_links>h1 {
     font-size: 1rem;
     color: var(--color-red-dark);
     text-transform: capitalize;
 }
-.footer_pages > ul,
-.quick_link > ul {
+
+.footer_pages>ul,
+.quick_link>ul {
     list-style: square;
 }
-.social_links > ul{
+
+.social_links>ul {
     list-style: none;
     padding: 0.5rem;
 }
-.footer_pages > ul > li > a,
-.quick_link > ul > li > a,
-.social_links > ul > li > a{
+
+.footer_pages>ul>li>a,
+.quick_link>ul>li>a,
+.social_links>ul>li>a {
     color: var(--color-white);
     font-size: 1rem;
     text-decoration: none;
     text-transform: capitalize;
 }
-.footer_pages > ul > li > a:hover,
-.quick_link > ul > li > a:hover,
-.social_links > ul > li > a:hover{
+
+.footer_pages>ul>li>a:hover,
+.quick_link>ul>li>a:hover,
+.social_links>ul>li>a:hover {
     color: var(--color-red-light);
 }
-.copy_right{
+
+.copy_right {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.copy_right > p > strong{
+
+.copy_right>p>strong {
     color: var(--color-red-dark);
 }
-.copy_right > p{
+
+.copy_right>p {
     color: var(--color-white);
 }
+
 /* footer end */
