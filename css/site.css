@@ -78,7 +78,45 @@ header {
 .navbar-toggler-icon {
     color: var(--color-white);
 }
-
+/*Login Modal*/
+.modal-backdrop{
+    z-index: 900;
+}
+#loginModal > * .modal-content{
+    /* border-radius: 0; */
+}
+#loginModal > * {
+    color: var(--color-gray-dark);
+}
+#loginModal > * h3{
+    color: var(--color-red-dark);
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#loginModal > * input[type="submit"]{
+    color: var(--color-white);
+    /* border-radius: 0; */
+}
+#loginModal > * label{
+    color: var(--color-gray-dark);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+#loginModal > * input[type="text"],
+#loginModal > * input[type="email"],
+#loginModal > * input[type="password"]{
+    border: 1px solid var(--color-red-dark) !important;
+    /* border-radius: 0; */
+}
+#loginModal > * input[type="text"]:focus,
+#loginModal > * input[type="email"]:focus,
+#loginModal > * input[type="password"]:focus{
+    box-shadow: none;
+}
+#loginModal  > * .btn_register_link{
+    color: var(--color-red-dark);
+}
 /* header style end  ------------------------------------------------------- */
 .btn_orange {
     background-color: var(--color-red-dark);
@@ -131,6 +169,7 @@ header {
     margin: 1.5rem auto;
     padding: 1.5rem;
     background-color: var(--color-gray-light);
+    color: var(--color-white);
 }
 
 .feature_products h1 {
@@ -174,6 +213,7 @@ header {
 /* Onlin Visitor Count start */
 .count_container {
     margin: 2rem auto;
+    color: var(--color-white);
 }
 
 .count_item {
@@ -231,6 +271,7 @@ header {
     margin: 1rem auto;
     background-color: var(--color-gray-dark);
     padding: 1.5rem;
+    color: var(--color-white);
 }
 
 .gym_info>ul {

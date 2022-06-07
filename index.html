@@ -48,10 +48,48 @@
                             <a class="nav-link" aria-current="page" href="#">Featured</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                        <button class="btn btn_login" type="submit">Login</button>
-                    </form>
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn btn_login" data-bs-toggle="modal" data-bs-target="#loginModal">Login /
+                        Register</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="loginModal" data-bs-backdrop="static" tabindex="-1"
+                        aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow">
+                                <div class="modal-header">
+                                    <h3>login</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <form class="login_form" action="">
+                                              
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="">User Name</label>
+                                                    <input class="form-control" type="text" name="user_name"
+                                                        id="user_name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="">password</label>
+                                                    <input class="form-control" type="password" name="user_name"
+                                                        id="user_name">
+                                                </div>
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <input type="submit" class="btn btn_orange" value="Login"> or
+                                                    <input type="submit" class="btn btn_register_link" value="register">
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
