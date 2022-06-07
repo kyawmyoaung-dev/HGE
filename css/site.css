@@ -54,7 +54,10 @@ header {
 #navbar>ul>li>a:hover {
     color: var(--color-red-light);
 }
-
+#header > * .user_name{
+    padding: 0 1rem;
+    color: var(--color-red-dark);
+}
 .btn_login {
     background-color: var(--color-red-dark);
     color: var(--color-white);
@@ -85,37 +88,61 @@ header {
 #loginModal > * .modal-content{
     /* border-radius: 0; */
 }
-#loginModal > * {
+#loginModal > * ,
+#registerModal > *{
     color: var(--color-gray-dark);
 }
-#loginModal > * h3{
+#loginModal > * span,
+#registerModal > * span{
+    padding: 0 1rem;  
+    font-size: .8rem;
+    font-weight: 400;
+}
+#loginModal > * a,
+#registerModal > * {
+    color: var(--color-red-dark);
+    font-size: .9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+#loginModal > * a:hover,
+#registerModal > * a:hover{
+    color: var(--color-red-light);
+}
+#loginModal > * h3,
+#registerModal > * h3{
     color: var(--color-red-dark);
     font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
 }
-#loginModal > * input[type="submit"]{
+#loginModal > * input[type="submit"],
+#registerModal > * input[type="submit"]{
     color: var(--color-white);
     /* border-radius: 0; */
 }
-#loginModal > * label{
+#loginModal > * label,
+#registerModal > * label{
     color: var(--color-gray-dark);
     font-weight: 500;
     text-transform: capitalize;
 }
 #loginModal > * input[type="text"],
 #loginModal > * input[type="email"],
-#loginModal > * input[type="password"]{
+#loginModal > * input[type="password"],
+#registerModal > * input[type="text"],
+#registerModal > * input[type="email"],
+#registerModal > * input[type="password"]{
     border: 1px solid var(--color-red-dark) !important;
     /* border-radius: 0; */
 }
 #loginModal > * input[type="text"]:focus,
 #loginModal > * input[type="email"]:focus,
-#loginModal > * input[type="password"]:focus{
+#loginModal > * input[type="password"]:focus,
+#registerModal > * input[type="text"]:focus,
+#registerModal > * input[type="email"]:focus,
+#registerModal > * input[type="password"]:focus{
     box-shadow: none;
-}
-#loginModal  > * .btn_register_link{
-    color: var(--color-red-dark);
 }
 /* header style end  ------------------------------------------------------- */
 .btn_orange {
