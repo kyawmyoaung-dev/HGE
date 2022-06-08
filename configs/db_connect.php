@@ -1,7 +1,9 @@
 <?php
 
-    $mysqli = new mysqli('localhost','admin','admin@123!@#','home_gym_equipment');
+    $db_connect = mysqli_connect('localhost','admin','admin@123!@#','home_gym_equipment');
 
-    if($mysqli -> connect_errno){
-        echo 'database conneciton error : ' . $mysqli -> connect_error;
+    if(mysqli_connect_errno()){
+        echo 'db connect error' . mysqli_connect_error();
+        exit();
     }
+    ?>

@@ -28,7 +28,7 @@
                     <div class="carousel-item">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <img src="./images/home_2.png" class="d-block w-100" alt="...">
+                                <img src="./images/home_3.png" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 home_contents">
                                 <h1>HOME GYM</h1>

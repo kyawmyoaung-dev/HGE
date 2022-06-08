@@ -51,8 +51,11 @@
                     </ul>
                     <?= isset($_SESSION['user_name']) ?  '<span class="user_name">Hello! ' .$_SESSION["user_name"].'</span>'  :  '' ?>
                     
+                    <?php if(isset($_SESSION['user_name'])): ?>
+                    <a class="btn btn_orange" href="logout.php">logout</a>  
+                    <?php else: ?> 
                     <button class="btn btn_login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-
+                    <?php endif ?> 
                     <!-- Login Modal -->
                     <div class="modal fade" id="loginModal" data-bs-backdrop="static" tabindex="-1"
                         aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -66,20 +69,20 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-12">
-                                            <form class="login_form" action="">
+                                            <form class="login_form" id="login_form" onsubmit="return login_validation()" action="login.php" method="POST">
                                               
                                                 <div class="mb-3">
-                                                    <label class="form-label" for="">User Name</label>
-                                                    <input class="form-control" type="text" name="user_name"
-                                                        id="user_name">
+                                                    <label class="form-label" for="">Email</label>
+                                                    <input class="form-control" type="email" name="email"
+                                                        id="email">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label" for="">password</label>
-                                                    <input class="form-control" type="password" name="user_name"
-                                                        id="user_name">
+                                                    <input class="form-control" type="password" name="password"
+                                                        id="password">
                                                 </div>
                                                 <div class="mb-3 d-flex align-items-center">
-                                                    <input type="submit" class="btn btn_orange" value="Login"> <span>Not registred? </span> <a data-bs-toggle="modal" data-bs-target="#registerModal" href="">Create an account</a>                                                    
+                                                    <input type="submit"   class="btn btn_orange" value="Login"> <span>Not registred? </span> <a data-bs-toggle="modal" data-bs-target="#registerModal" href="">Create an account</a>                                                    
                                                 </div>
                                             </form>
                                         </div>
@@ -102,16 +105,16 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-12">
-                                            <form class="login_form" action="register.php" method="post">
+                                            <form class="login_form" id="register_form" onsubmit="return register_validation()" action="register.php" method="post">
                                               
                                                 <div class="mb-3">
-                                                    <label class="form-label" for="">User Name</label>
+                                                    <label class="form-label" for="">Name</label>
                                                     <input class="form-control" type="text" name="user_name"
                                                         id="user_name">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label" for="">email</label>
-                                                    <input class="form-control" type="text" name="email"
+                                                    <input class="form-control" type="email" name="email"
                                                         id="email">
                                                 </div>
                                                 <div class="mb-3">
@@ -141,3 +144,6 @@
         </div>
     </header>
     <!-- header end  -->
+    <script>
+         
+    </script>
