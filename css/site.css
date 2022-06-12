@@ -49,6 +49,8 @@ header {
 
 #navbar>ul>li>a.active {
     color: var(--color-red-light);
+    background-color: var(--color-gray-light);
+    border-radius: 5px;
 }
 
 #navbar>ul>li>a:hover {
@@ -63,6 +65,7 @@ header {
     color: var(--color-white);
     border: 1px solid var(--color-red-light);
     text-transform: uppercase;
+    margin-left: 5px;
 }
 
 .btn_login:hover {
@@ -85,9 +88,7 @@ header {
 .modal-backdrop{
     z-index: 900;
 }
-#loginModal > * .modal-content{
-    /* border-radius: 0; */
-}
+
 #loginModal > * ,
 #registerModal > *{
     color: var(--color-gray-dark);
@@ -119,7 +120,7 @@ header {
 #loginModal > * input[type="submit"],
 #registerModal > * input[type="submit"]{
     color: var(--color-white);
-    /* border-radius: 0; */
+    background-color: var(--color-red-dark);
 }
 #loginModal > * label,
 #registerModal > * label{
@@ -148,7 +149,6 @@ header {
 .btn_orange {
     background-color: var(--color-red-dark);
     color: var(--color-white);
-    /* border: 1px solid var(--color-red-light); */
     text-transform: capitalize;
     outline: none;
 }

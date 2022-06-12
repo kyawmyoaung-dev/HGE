@@ -6,7 +6,7 @@
 
     if(isset($_SESSION['Message'])){
         echo '<h1>'.$_SESSION['Message'].'</h1>'; // display the message
-        //unset($_SESSION['Message']); // clear the value so that it doesn't display again
+        unset($_SESSION['Message']); // clear the value so that it doesn't display again
     }
    ?>
 </div>

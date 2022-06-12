@@ -12,6 +12,7 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="./css/site.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     
@@ -28,25 +29,25 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/home.php" ?  'active' : ''); ?> " aria-current="page" href="home.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="information.php">Information</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/information.php" ?  'active' : ''); ?> " aria-current="page" href="information.php">Information</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="wanted.php">Wanted</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/wanted.php" ?  'active' : ''); ?> " aria-current="page" href="wanted.php">Wanted</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="workshop.php">Workshop</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/workshop.php" ?  'active' : ''); ?> " aria-current="page" href="workshop.php">Workshop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="gallery.php">Gallery</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/gallery.php" ?  'active' : ''); ?> " aria-current="page" href="gallery.php">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/contact.php" ?  'active' : ''); ?> " aria-current="page" href="contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="featured.php">Featured</a>
+                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/featured.php" ?  'active' : ''); ?> " aria-current="page" href="featured.php">Featured</a>
                         </li>
                     </ul>
                     <?= isset($_SESSION['user_name']) ?  '<span class="user_name">Hello! ' .$_SESSION["user_name"].'</span>'  :  '' ?>
@@ -127,6 +128,10 @@
                                                     <input class="form-control" type="password" name="confirm_password"
                                                         id="confirm_password">
                                                 </div>
+                                                <div class="mb-3">
+                                                <div class="g-recaptcha" data-sitekey="6Le53mIgAAAAAIQksknNJ2kisIzZUL01HN_rLNw0"></div>
+                                                </div>
+
                                                 <div class="mb-3 d-flex align-items-center">
                                                     <input type="submit" class="btn btn_orange" value="Register"> 
                                                 </div>

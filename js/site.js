@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     load_blogs_post();
 });
 
+
 function login_validation() {
     let result = true;
     let _loginform = document.querySelector('#login_form');
@@ -99,6 +100,16 @@ function register_validation() {
         _confirm_password.value = '';
         _confirm_password.setAttribute('placeholder', 'Do not match with your password');
         result = false;
-    }
+    }  
     return result;
 }
+
+document.querySelector('#register_form').addEventListener('submit',function(e){
+    var response = grecaptcha.getResponse();
+    if(response.length == 0) 
+    { 
+      alert("Please verify you are humann!"); 
+      e.preventDefault();
+      return false;
+    }
+});
