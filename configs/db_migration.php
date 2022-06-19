@@ -2,22 +2,24 @@
 
 include 'db_connect.php';
 
-// //user table
-// $user_table_query ="CREATE TABLE USERS(
-//     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     user_name VARCHAR(500) NOT NULL,
-//     email VARCHAR(500) NOT NULL,
-//     password VARCHAR(500) NOT NULL,
-//     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-// )";
+//user table
+$user_table_query ="CREATE TABLE USERS(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(500) NOT NULL,
+    email VARCHAR(500) NOT NULL,
+    password VARCHAR(500) NOT NULL,
+    view_count INT NULL,
+    login_attempt INT NULL,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
 
-// //dorp table if exists
-// if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`users`")){
-//     echo 'users table drop successfully! <br/>';
-// }
-// if(mysqli_query($db_connect,$user_table_query)){
-//     echo 'users table created successfully! <br/>';
-// }
+//dorp table if exists
+if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`users`")){
+    echo 'users table drop successfully! <br/>';
+}
+if(mysqli_query($db_connect,$user_table_query)){
+    echo 'users table created successfully! <br/>';
+}
 
 
 

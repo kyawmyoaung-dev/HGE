@@ -50,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
     load_blogs_post();
+
+    let cookie_modal = new bootstrap.Modal(document.querySelector('#cookie_modal'), {keyboard: false});
+    
+    if(cookie_modal != null && typeof(cookie_modal) != 'undefined'){
+        cookie_modal.show();
+    }
 });
 
 

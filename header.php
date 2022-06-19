@@ -74,13 +74,11 @@
                                               
                                                 <div class="mb-3">
                                                     <label class="form-label" for="">Email</label>
-                                                    <input class="form-control" type="email" name="email"
-                                                        id="email">
+                                                    <input class="form-control" type="email" name="email" value="<?php echo(isset($_COOKIE['u_e']) ? $_COOKIE['u_e'] : '') ?>" id="email">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="form-label" for="">password</label>
-                                                    <input class="form-control" type="password" name="password"
-                                                        id="password">
+                                                    <input class="form-control" type="password" name="password" value="<?php echo(isset($_COOKIE['u_p']) ? $_COOKIE['u_p'] : '') ?>" id="password">
                                                 </div>
                                                 <div class="mb-3 d-flex align-items-center">
                                                     <input type="submit"   class="btn btn_orange" value="Login"> <span>Not registred? </span> <a data-bs-toggle="modal" data-bs-target="#registerModal" href="">Create an account</a>                                                    

@@ -242,6 +242,5 @@
             </div>
         </div>
     </div>
-    <!-- blogs and new end -->
-
+    <!-- blogs and new end -->    
 <?php  include 'footer.php' ?>

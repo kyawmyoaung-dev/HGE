@@ -1,4 +1,22 @@
 <!-- footer start -->
+<?php if(!isset($_COOKIE['accept_cookie'])){?>
+        <form action="cookie.php" method="post">
+            <div class="modal modal-fullscreen" data-bs-backdrop="static" id="cookie_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="text-dark fs-5">This website uses cookies to ensure you get the best experience on our website.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" data-bs-dismiss="modal" name="deny" id="deny" class="btn btn-secondary" value="Decline"/>
+                            <input type="submit" data-bs-dismiss="modal" name="allow" id="allow" class="btn btn_orange" value="Allow cookies"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <?php }?>
+    
 <footer class="footer">
         <div class="container">
             <div class="row mb-3">
