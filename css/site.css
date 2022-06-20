@@ -158,6 +158,9 @@ header {
 }
 
 /* home style starts  ------------------------------------------------------- */
+.home{
+    background-color: var(--color-gray-light);
+}
 .home_contents>h1 {
     color: var(--color-red-dark);
     font-size: 2.5rem;
@@ -193,9 +196,8 @@ header {
 
 /* feature products start  ------------------------------------------------------- */
 .feature_products {
-    margin: 1.5rem auto;
     padding: 1.5rem;
-    background-color: var(--color-gray-light);
+    background-color: var(--color-gray-dark);
     color: var(--color-white);
 }
 
@@ -209,9 +211,8 @@ header {
 }
 
 .feature_products_content {
-    background-color: var(--color-gray-dark);
+    background-color: var(--color-gray-light);
     padding: 1.5rem;
-    border-radius: .5rem;
 }
 
 .feature_products_content>h3 {
@@ -239,8 +240,9 @@ header {
 
 /* Onlin Visitor Count start */
 .count_container {
-    margin: 2rem auto;
+    padding: 1.5rem;
     color: var(--color-white);
+    background-color: var(--color-gray-light);
 }
 
 .count_item {
@@ -265,7 +267,6 @@ header {
 
 /* google map start */
 .google_map {
-    background-color: var(--color-gray-light);
     margin: 1rem auto;
 }
 
@@ -296,8 +297,8 @@ header {
 
 .gym_info {
     margin: 1rem auto;
-    background-color: var(--color-gray-dark);
-    padding: 1.5rem;
+    background-color: var(--color-gray-light);
+    padding: 0.5rem;
     color: var(--color-white);
 }
 
@@ -323,6 +324,7 @@ header {
 /* blogs start */
 .blogs{
     padding-bottom: 1.5rem;
+    background-color: var(--color-gray-light);
 }
 .blogs > h1{
     font-size: 2rem;
@@ -331,6 +333,10 @@ header {
     text-align: center;
     text-transform: uppercase;
     padding: 1.5rem;
+}
+.blog_content{
+    background-color: var(--color-gray-dark);
+    padding: 1rem;
 }
 .blog_content > h3{
     font-size: 1rem;
@@ -347,13 +353,13 @@ header {
     border: none;
 }
 .blog_content > p{
-    color: var(--color-white-dark);
+    color: var(--color-white);
 }
 /* blogs end */
 
 /* footer start */
 .footer{
-    background-color: var(--color-gray-light);
+    background-color: var(--color-gray-dark);
     margin-top: 1.5rem auto;
     padding-top: 1.5rem;
 }
@@ -448,4 +454,84 @@ header {
     font-size: 2.5rem;
     line-height: 0.9;
     text-align: center;
+  }
+
+  /* Wanted Page*/
+  .wanted{
+    background-color: var(--color-gray-light);
+    padding: 2rem 0;
+  }
+  .wanted > * .title{
+    color: var(--color-red-dark);
+    text-transform: uppercase;    
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .wanted >* .search{
+    margin: 2rem auto;
+    padding:1rem;
+    background-color: var(--color-gray-dark);
+  }
+  .wanted >* .search_input{
+    border: 2px solid var(--color-red-dark);
+    border-radius: 0.2rem;
+  }
+  .wanted >* .search_input:focus{
+    box-shadow: none;
+  }
+  .wanted > * .search_button{
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+  }
+
+  .product_container{
+    background-color: var(--color-gray-dark);
+    padding: 1rem;
+    /* box-shadow: 0 .2rem .2rem rgba(0,0,0,.15); */
+  }
+  .product_container > .product_img{
+    position: relative;
+  }
+  .product_container > .product_img > .product_type{
+    position: absolute;
+    color: var(--color-white);
+    background-color: var(--color-red-light);
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 0.5rem;
+  }
+  .product_container > .product_img > img{
+    border-radius: 0;
+    box-shadow: 0 0.5rem 0.5rem var(--color-gray-dark);
+  }
+  .product_container > .product_description{
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+  .product_container > .product_code,.product_category{
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .product_container > .product_price{
+    display: block;
+    color: var(--color-red-dark);
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  .product_container > .btn_add_to_card{
+    width: 100%;
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    margin-top: 0.3rem;
+    text-transform:uppercase;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
   }

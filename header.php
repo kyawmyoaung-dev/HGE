@@ -29,25 +29,25 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/home.php" ?  'active' : ''); ?> " aria-current="page" href="home.php">Home</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/home.php") ?  'active' : ''); ?> " aria-current="page" href="home.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/information.php" ?  'active' : ''); ?> " aria-current="page" href="information.php">Information</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/information.php") ?  'active' : ''); ?> " aria-current="page" href="information.php">Information</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/wanted.php" ?  'active' : ''); ?> " aria-current="page" href="wanted.php">Wanted</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/wanted.php") ?  'active' : ''); ?> " aria-current="page" href="wanted.php">Wanted</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/workshop.php" ?  'active' : ''); ?> " aria-current="page" href="workshop.php">Workshop</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/workshop.php") ?  'active' : ''); ?> " aria-current="page" href="workshop.php">Workshop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/gallery.php" ?  'active' : ''); ?> " aria-current="page" href="gallery.php">Gallery</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/gallery.php") ?  'active' : ''); ?> " aria-current="page" href="gallery.php">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/contact.php" ?  'active' : ''); ?> " aria-current="page" href="contact.php">Contact</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/contact.php") ?  'active' : ''); ?> " aria-current="page" href="contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo($_SERVER['SCRIPT_NAME'] == "/HGE/featured.php" ?  'active' : ''); ?> " aria-current="page" href="featured.php">Featured</a>
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/featured.php") ?  'active' : ''); ?> " aria-current="page" href="featured.php">Featured</a>
                         </li>
                     </ul>
                     <?= isset($_SESSION['user_name']) ?  '<span class="user_name">Hello! ' .$_SESSION["user_name"].'</span>'  :  '' ?>
