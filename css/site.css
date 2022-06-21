@@ -4,7 +4,7 @@
     --color-gray-dark: #2f3640;
     --color-gray-light: #353b48;
     --color-white: #fff;
-    --color-white-dark:#adb5bd;
+    --color-white-dark: #adb5bd;
 }
 
 * {
@@ -56,10 +56,12 @@ header {
 #navbar>ul>li>a:hover {
     color: var(--color-red-light);
 }
-#header > * .user_name{
+
+#header>* .user_name {
     padding: 0 1rem;
     color: var(--color-red-dark);
 }
+
 .btn_login {
     background-color: var(--color-red-dark);
     color: var(--color-white);
@@ -84,67 +86,77 @@ header {
 .navbar-toggler-icon {
     color: var(--color-white);
 }
+
 /*Login Modal*/
-.modal-backdrop{
+.modal-backdrop {
     z-index: 900;
 }
 
-#loginModal > * ,
-#registerModal > *{
+#loginModal>*,
+#registerModal>* {
     color: var(--color-gray-dark);
 }
-#loginModal > * span,
-#registerModal > * span{
-    padding: 0 1rem;  
+
+#loginModal>* span,
+#registerModal>* span {
+    padding: 0 1rem;
     font-size: .8rem;
     font-weight: 400;
 }
-#loginModal > * a,
-#registerModal > * {
+
+#loginModal>* a,
+#registerModal>* {
     color: var(--color-red-dark);
     font-size: .9rem;
     text-decoration: none;
     font-weight: 500;
 }
-#loginModal > * a:hover,
-#registerModal > * a:hover{
+
+#loginModal>* a:hover,
+#registerModal>* a:hover {
     color: var(--color-red-light);
 }
-#loginModal > * h3,
-#registerModal > * h3{
+
+#loginModal>* h3,
+#registerModal>* h3 {
     color: var(--color-red-dark);
     font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
 }
-#loginModal > * input[type="submit"],
-#registerModal > * input[type="submit"]{
+
+#loginModal>* input[type="submit"],
+#registerModal>* input[type="submit"] {
     color: var(--color-white);
     background-color: var(--color-red-dark);
 }
-#loginModal > * label,
-#registerModal > * label{
+
+#loginModal>* label,
+#registerModal>* label {
     color: var(--color-gray-dark);
     font-weight: 500;
     text-transform: capitalize;
 }
-#loginModal > * input[type="text"],
-#loginModal > * input[type="email"],
-#loginModal > * input[type="password"],
-#registerModal > * input[type="text"],
-#registerModal > * input[type="email"],
-#registerModal > * input[type="password"]{
+
+#loginModal>* input[type="text"],
+#loginModal>* input[type="email"],
+#loginModal>* input[type="password"],
+#registerModal>* input[type="text"],
+#registerModal>* input[type="email"],
+#registerModal>* input[type="password"] {
     border: 1px solid var(--color-red-dark) !important;
     /* border-radius: 0; */
 }
-#loginModal > * input[type="text"]:focus,
-#loginModal > * input[type="email"]:focus,
-#loginModal > * input[type="password"]:focus,
-#registerModal > * input[type="text"]:focus,
-#registerModal > * input[type="email"]:focus,
-#registerModal > * input[type="password"]:focus{
+
+#loginModal>* input[type="text"]:focus,
+#loginModal>* input[type="email"]:focus,
+#loginModal>* input[type="password"]:focus,
+#registerModal>* input[type="text"]:focus,
+#registerModal>* input[type="email"]:focus,
+#registerModal>* input[type="password"]:focus {
     box-shadow: none;
 }
+
 /* header style end  ------------------------------------------------------- */
 .btn_orange {
     background-color: var(--color-red-dark);
@@ -158,9 +170,10 @@ header {
 }
 
 /* home style starts  ------------------------------------------------------- */
-.home{
+.home {
     background-color: var(--color-gray-light);
 }
+
 .home_contents>h1 {
     color: var(--color-red-dark);
     font-size: 2.5rem;
@@ -322,11 +335,12 @@ header {
 
 
 /* blogs start */
-.blogs{
+.blogs {
     padding-bottom: 1.5rem;
     background-color: var(--color-gray-light);
 }
-.blogs > h1{
+
+.blogs>h1 {
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-white);
@@ -334,35 +348,42 @@ header {
     text-transform: uppercase;
     padding: 1.5rem;
 }
-.blog_content{
+
+.blog_content {
     background-color: var(--color-gray-dark);
     padding: 1rem;
 }
-.blog_content > h3{
+
+.blog_content>h3 {
     font-size: 1rem;
     color: var(--color-red-light);
     font-weight: bold;
     text-transform: uppercase;
 }
-.blog_content > span{
+
+.blog_content>span {
     font-size: 0.7rem;
     color: var(--color-white-dark);
 }
-.blog_content > .img-thumbnail{
+
+.blog_content>.img-thumbnail {
     background-color: var(--color-gray-light) !important;
     border: none;
 }
-.blog_content > p{
+
+.blog_content>p {
     color: var(--color-white);
 }
+
 /* blogs end */
 
 /* footer start */
-.footer{
+.footer {
     background-color: var(--color-gray-dark);
     margin-top: 1.5rem auto;
     padding-top: 1.5rem;
 }
+
 .footer_logo>h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -428,73 +449,74 @@ header {
 
 
 /*Message pages*/
-.message{
+.message {
     text-align: center;
-    position: relative; 
+    position: relative;
     height: 90vh;
     display: flex;
     align-items: flex-start;
-    justify-content:center;
+    justify-content: center;
     padding: 5rem;
 }
-.message::before{
+
+.message::before {
     content: "";
-      background: url('../images/error.jpg')no-repeat center center;
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.3;
+    background: url('../images/error.jpg')no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
 }
-.message > h1 {
+
+.message>h1 {
     position: relative;
-    color: var(--color-white);  
+    color: var(--color-white);
     font-size: 2.5rem;
     line-height: 0.9;
     text-align: center;
-  }
+}
 
-  /* Wanted Page*/
-  .wanted{
+/* Wanted Page Start*/
+.wanted {
     background-color: var(--color-gray-light);
     padding: 2rem 0;
-  }
-  .wanted > * .title{
+}
+.wanted>* .title {
     color: var(--color-red-dark);
-    text-transform: uppercase;    
+    text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 700;
-  }
-  .wanted >* .search{
+}
+.wanted>* .search {
     margin: 2rem auto;
-    padding:1rem;
+    padding: 1rem;
     background-color: var(--color-gray-dark);
-  }
-  .wanted >* .search_input{
+}
+.wanted>* .search_input {
     border: 2px solid var(--color-red-dark);
     border-radius: 0.2rem;
-  }
-  .wanted >* .search_input:focus{
+}
+.wanted>* .search_input:focus {
     box-shadow: none;
-  }
-  .wanted > * .search_button{
+}
+.wanted>* .search_button {
     background-color: var(--color-red-dark);
     color: var(--color-white);
     text-transform: uppercase;
     border-radius: 0.2rem;
-  }
-
-  .product_container{
+}
+.product_container {
     background-color: var(--color-gray-dark);
     padding: 1rem;
     /* box-shadow: 0 .2rem .2rem rgba(0,0,0,.15); */
-  }
-  .product_container > .product_img{
+}
+.product_container>.product_img {
     position: relative;
-  }
-  .product_container > .product_img > .product_type{
+}
+.product_container>.product_img>.product_type {
     position: absolute;
     color: var(--color-white);
     background-color: var(--color-red-light);
@@ -502,36 +524,72 @@ header {
     padding: 0.5rem;
     font-weight: 500;
     font-size: 0.5rem;
-  }
-  .product_container > .product_img > img{
+}
+.product_container>.product_img>img {
     border-radius: 0;
     box-shadow: 0 0.5rem 0.5rem var(--color-gray-dark);
-  }
-  .product_container > .product_description{
+}
+.product_container>.product_description {
     padding-top: 0.5rem;
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-white);
-  }
-  .product_container > .product_code,.product_category{
+}
+.product_container>.product_code,
+.product_category {
     text-transform: capitalize;
     font-size: 0.8rem;
     font-weight: 400;
-  }
-  .product_container > .product_price{
+}
+.product_container>.product_price {
     display: block;
     color: var(--color-red-dark);
     font-size: 1.3rem;
     font-weight: bolder;
-  }
-  .product_container > .btn_add_to_card{
+}
+.product_container>.btn_add_to_card {
     width: 100%;
     background-color: var(--color-red-dark);
     color: var(--color-white);
     margin-top: 0.3rem;
-    text-transform:uppercase;
+    text-transform: uppercase;
     border-radius: 0.2rem;
     font-size: 0.8rem;
     font-weight: bold;
-  }
+}
+
+/* wanted page end */
+
+/* information page start */
+.information{
+    background-color: var(--color-gray-light);
+}
+.information>* .info_label {
+    color: var(--color-red-dark);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.information > * .info_title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-white);
+}
+.information > * .info_list ul,li{
+    font-size: 1rem;
+}
+.information > * .info_price{
+    color: var(--color-red-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+.information > * .info_button{
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+/* information page end */
