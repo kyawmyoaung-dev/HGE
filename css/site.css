@@ -592,4 +592,51 @@ header {
     color: var(--color-white);
     text-transform: uppercase;
 }
+.information_gym > * .information_gym_container{
+    padding: 1.5rem 0;
+    box-shadow: 0 .5rem .5rem var(--color-gray-dark);
+}
+.information_gym > * .information_gym_container > h3{
+    color: var(--color-red-dark);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.information_gym > * .information_gym_container > p{
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+.information_review{
+    background-color: var(--color-gray-light);
+    padding: 1.5rem 0;
+}
+.information_review > * h1{
+    color: var(--color-red-dark);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.review_box{
+
+}
+.review_box > * .review_box_img{
+    
+}
+.review_box > * .review_box_content{
+    
+}
+.review_box_content_para{
+    color: var(--color-white);
+    font-weight: 100;
+
+}
+.review_box_content_name{
+    text-align: right;
+    display: block;
+    color: var(--color-white-dark);
+    font-weight: 500;
+}
 /* information page end */
