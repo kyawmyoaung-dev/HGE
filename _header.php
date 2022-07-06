@@ -1,6 +1,4 @@
-<?php 
-     session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,21 +32,35 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/information.php") ?  'active' : ''); ?> " aria-current="page" href="information.php">Information</a>
                         </li>
+                        <?php if(isset($_SESSION['user_name'])){ ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/wanted.php") ?  'active' : ''); ?> " aria-current="page" href="wanted.php">Wanted</a>
                         </li>
+                        <?php }?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/workshop.php") ?  'active' : ''); ?> " aria-current="page" href="workshop.php">Workshop</a>
                         </li>
+                        <?php if(isset($_SESSION['user_name'])){ ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/gallery.php") ?  'active' : ''); ?> " aria-current="page" href="gallery.php">Gallery</a>
                         </li>
+                        <?php }?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/contact.php") ?  'active' : ''); ?> " aria-current="page" href="contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/featured.php") ?  'active' : ''); ?> " aria-current="page" href="featured.php">Featured</a>
                         </li>
+                        <?php if(isset($_SESSION['user_name']) && isset($_SESSION['item_list'])){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/cart.php") ?  'active' : ''); ?> " aria-current="page" href="cart.php">
+                            Shopping Cart<span class="badge bg-danger">
+                            <?php 
+                                $item_list = $_SESSION['item_list'];
+                                echo count($item_list);
+                            ?></span></a>
+                        </li>
+                        <?php }?>
                     </ul>
                     <?= isset($_SESSION['user_name']) ?  '<span class="user_name">Hello! ' .$_SESSION["user_name"].'</span>'  :  '' ?>
                     
@@ -56,7 +68,7 @@
                     <a class="btn btn_orange" href="logout.php">logout</a>  
                     <?php else: ?> 
                     <button class="btn btn_login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-                    <?php endif ?> 
+                    <?php endif?>
                     <!-- Login Modal -->
                     <div class="modal fade" id="loginModal" data-bs-backdrop="static" tabindex="-1"
                         aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -147,6 +159,3 @@
         </div>
     </header>
     <!-- header end  -->
-    <script>
-         
-    </script>

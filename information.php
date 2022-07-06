@@ -1,4 +1,4 @@
-<?php  include 'header.php' ?>
+<?php  include '_header.php' ?>
 
 
  <!-- information page start -->

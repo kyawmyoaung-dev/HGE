@@ -508,6 +508,12 @@ header {
     text-transform: uppercase;
     border-radius: 0.2rem;
 }
+.search_text{
+    color: var(--color-red-dark);
+}
+.btn_add_to_card{
+    background-color: var(--color-red-dark);
+}
 .product_container {
     background-color: var(--color-gray-dark);
     padding: 1rem;
@@ -640,3 +646,122 @@ header {
     font-weight: 500;
 }
 /* information page end */
+
+/* shopping cart start */
+
+.cart_list{
+    background-color: var(--color-gray-light);
+    padding: 3rem 0;
+}
+.cart_list > * h3{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+/* shopping cart end */
+
+
+/* workshop page start */
+.workshop{
+    background-color: var(--color-gray-light);
+    /* margin: 1.5rem auto; */
+    padding: 1.5rem 0;
+}
+.workshop >* .workhop_title{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+.workhop_sub_title{
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.workshop_item{
+    text-align: center;
+}
+.workshop_item > h3{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+.workshop_content{
+    padding: 1.5rem;
+    background-color: var(--color-gray-dark);
+}
+.workshop_content > h3{
+    color: var(--color-red-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+.workshop_content > p{
+    font-weight: 200;
+}
+.workshop_content_link {
+   text-align: center;
+}
+.workshop_content_link > a{
+    display: inline-block;
+    color: var(--color-red-dark);
+    font-weight: 100;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+/* workshop page end */
+
+/* contact us page start */
+.contact_us{
+    background-color: var(--color-gray-light);
+    padding: 1rem 0;
+}
+.contact_us_title{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+.contact_us_form{
+    background-color: var(--color-gray-dark);
+    padding: 2rem;
+}
+
+.contact_us_form>* input[type="text"],
+.contact_us_form>* input[type="email"],
+.contact_us_form>* textarea{
+    border: 1px solid var(--color-red-dark) !important;
+    border-radius: 0;
+}
+
+.contact_us_form>* input[type="text"]:focus,
+.contact_us_form>* input[type="email"]:focus,
+.contact_us_form>* textarea:focus {
+    box-shadow: none;
+}
+.contact_us_address{
+    padding: 1.5rem 0;
+    margin: .5rem auto;
+}
+.contact_us_address > p{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.contact_us_address > span{
+    display: block;
+}
+.contact_us_address > span > strong{
+    color: var(--color-red-dark);
+    text-transform: capitalize;
+    font-size: 100;
+}
+/* contact us page end */
