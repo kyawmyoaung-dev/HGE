@@ -765,3 +765,39 @@ header {
     font-size: 100;
 }
 /* contact us page end */
+
+/* gallery page start */
+.gallery{
+    background: var(--color-gray-light);
+    padding: 1.5rem 0;
+}
+.gallery >* .title{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+.product_categories{
+    padding: 0.7rem;
+    background: var(--color-gray-dark)
+}
+.product_categories > a{
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 .5rem;
+}
+.product_categories > a:hover{
+    color: var(--color-red-dark);
+}
+/* .product_categories > a::after{
+    content: " / ";
+} */
+.product_categories > a.active{
+    color: var(--color-red-dark);
+}
+/* gallery page end */
