@@ -7,7 +7,7 @@
             <h1 class="workhop_title">Gym Equipment WorkShop and Maintenance Services</h1>
             <p class="workhop_sub_title">Our comprehensive and timely maintenance and repair services help keep your gym equipment in tip top shape and your workouts optimal. Whether you’re looking for a one time repair or on-going maintenance, our experienced and certified technicians ensure you’ll never miss another workout due to faulty equipment.</p>
 
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-2">
                     <div class="workshop_item">
                         <img src="./images/workshop_1.jpg" class="img-thumbnail img-fluid" alt="">
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-2">
                     <div class="workshop_content">
                         <h3>EQUIPMENT REPAIR</h3>
