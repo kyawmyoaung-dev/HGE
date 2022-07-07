@@ -119,3 +119,9 @@ document.querySelector('#register_form').addEventListener('submit',function(e){
       return false;
     }
 });
+
+function redirect_home_page()
+{
+    alert('reload')
+    location.reload(true);
+}

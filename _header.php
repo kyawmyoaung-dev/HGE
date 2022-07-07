@@ -51,13 +51,12 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/featured.php") ?  'active' : ''); ?> " aria-current="page" href="featured.php">Featured</a>
                         </li>
-                        <?php if(isset($_SESSION['user_name']) && isset($_SESSION['item_list'])){ ?>
+                        <?php if(isset($_SESSION["user_name"]) && isset($_SESSION["item_list"])){ ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/cart.php") ?  'active' : ''); ?> " aria-current="page" href="cart.php">
-                            Shopping Cart<span class="badge bg-danger">
+                            <i class="bi bi-bag-check"></i> <span class="badge bg-danger">
                             <?php 
-                                $item_list = $_SESSION['item_list'];
-                                echo count($item_list);
+                                echo count($_SESSION["item_list"]);
                             ?></span></a>
                         </li>
                         <?php }?>

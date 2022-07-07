@@ -1,6 +1,6 @@
 
 <?php 
-    include '_home.php';
+    include 'home.php';
  ?>
 
 

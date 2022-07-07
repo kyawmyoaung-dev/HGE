@@ -1,32 +1,5 @@
 <?php  
     include_once '_header.php'; 
-    include_once 'shopping_cart_item.php';
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["add_to_cart"])){
-        
-        $item = new shopping_cart_item();
-        $item->id =  $_POST['id'];
-        $item->code =  $_POST['code'];
-        $item->description =  $_POST['description'];
-        $item->price =  $_POST['price'];
-        $item->product_type =  $_POST['product_type'];
-        $item->category =  $_POST['category'];
-        $item->quantity = 1;
-
-        $item_list;
-
-        if(isset($_SESSION['item_list'])){
-            $item_list =  $_SESSION['item_list'];
-        }else{
-            $item_list = array();
-        }
-
-        array_push($item_list,$item);
-        $_SESSION['item_list'] = $item_list;
-        //print_r(count($item_list));
-        //header('location: home.php');
-        //header("Refresh:0");
-    }    
 ?>
 
   <!-- wanted page start -->
@@ -40,7 +13,7 @@
                         <input type="text" id="search" name="search" placeholder="Search Products..." class="form-control search_input me-2">
                         <input type="submit" class="btn search_button" value="Search">
                     </div>
-                    <?php if(isset($_GET['search'])) {?>
+                    <?php if(isset($_GET['search']) && $_GET['search'] != "") {?>
                     <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center align-items-center">
                         <p class="search_text mb-0">Searching for ... <?php echo $_GET['search']; ?></p>                        
                     </div>
@@ -82,14 +55,14 @@
                             <span class="product_price">Price : <?php echo $product['selling_price'] ?></span>
                             <span class="product_code">item code : <?php echo $product['code'] ?></span>
                             <span class="product_category">category : <?php echo $product['category_code'] ?></span>
-                            <form action="wanted.php" method="post">
+                            <form action="addtocard.php"  method="POST">
                                 <input type="hidden" id="id" name="id" value="<?php echo $product['id']; ?>">
                                 <input type="hidden" id="code" name="code" value="<?php echo $product['code']; ?>">
                                 <input type="hidden" id="description" name="description" value="<?php echo $product['description']; ?>">
                                 <input type="hidden" id="price" name="price" value="<?php echo $product['selling_price']; ?>">
                                 <input type="hidden" id="product_type" name="product_type" value="<?php echo $product['product_type']; ?>">
                                 <input type="hidden" id="category" name="category" value="<?php echo $product['category_code']; ?>">
-                                <input type="submit" name="add_to_cart" class="btn btn_orange" value="add to cart">
+                                <input type="submit"  name="add_to_cart" class="btn btn_orange" value="add to cart">
                             </form>
                             
                             </div>
