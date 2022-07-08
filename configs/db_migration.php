@@ -22,6 +22,35 @@ if(mysqli_query($db_connect,$user_table_query)){
 }
 
 
+//categories table
+$categories_table_query ="CREATE TABLE CATEGORIES(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(500) NOT NULL,
+    description VARCHAR(500) NOT NULL,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
+if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`CATEGORIES`")){
+    echo 'categories table drop successfully! <br/>';
+}
+if(mysqli_query($db_connect,$categories_table_query)){
+    echo 'categories table created successfully! <br/>';
+}
+
+//product type table
+$product_type_table ="CREATE TABLE PRODUCTTYPES(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(500) NOT NULL,
+    description VARCHAR(500) NOT NULL,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
+if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`PRODUCTTYPES`")){
+    echo 'product_types table drop successfully! <br/>';
+}
+if(mysqli_query($db_connect,$product_type_table)){
+    echo 'product_type table created successfully! <br/>';
+}
 
 //product  table
 $product_table ="CREATE TABLE PRODUCTS(
@@ -53,34 +82,6 @@ if(mysqli_query($db_connect,$product_table)){
 }
 
 
-// //categories table
-// $categories_table_query ="CREATE TABLE CATEGORIES(
-//     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     code VARCHAR(500) NOT NULL,
-//     description VARCHAR(500) NOT NULL,
-//     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-// )";
 
-// if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`CATEGORIES`")){
-//     echo 'categories table drop successfully! <br/>';
-// }
-// if(mysqli_query($db_connect,$categories_table_query)){
-//     echo 'categories table created successfully! <br/>';
-// }
-
-// //product type table
-// $product_type_table ="CREATE TABLE PRODUCTTYPES(
-//     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//     code VARCHAR(500) NOT NULL,
-//     description VARCHAR(500) NOT NULL,
-//     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-// )";
-
-// if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`PRODUCTTYPES`")){
-//     echo 'product_types table drop successfully! <br/>';
-// }
-// if(mysqli_query($db_connect,$product_type_table)){
-//     echo 'product_type table created successfully! <br/>';
-// }
 
 ?>

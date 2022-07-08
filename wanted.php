@@ -59,13 +59,13 @@
                         FROM `products` 
                         INNER JOIN producttypes ON products.producttype_id = producttypes.id 
                         INNER JOIN categories ON products.category_id = categories.id
-                        WHERE producttypes.code = 'SECOND' AND ( products.code LIKE '%$search%' OR products.description LIKE '%$search%' )";
+                        WHERE producttypes.code = 'SECOND HAND' AND ( products.code LIKE '%$search%' OR products.description LIKE '%$search%' )";
                      }else{
                         $query =   "SELECT products.id,products.code,products.description,products.selling_price,products.quantity,products.image_1,products.image_2,products.image_3,producttypes.description as product_type, categories.code as category_code
                         FROM `products` 
                         INNER JOIN producttypes ON products.producttype_id = producttypes.id 
                         INNER JOIN categories ON products.category_id = categories.id
-                        WHERE producttypes.code = 'SECOND'";
+                        WHERE producttypes.code = 'SECOND HAND'";
                      }
                     
                  
