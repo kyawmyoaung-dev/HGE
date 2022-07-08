@@ -1,5 +1,5 @@
-<?php  include '_header.php' ?>
-
+<?php   include '_header.php'; ?>
+<?php   include 'configs/db_connect.php'; ?>
 
   <!-- gallery page start -->
   <div class="gallery">
@@ -9,18 +9,34 @@
             <div class="row my-3">
                 <div class="col-12">
                     <div class="product_categories">
-                            <a class="active" href="#">All</a> 
-                            <a href="#" name="category">BARBELLS</a>  
-                            <a href="#" name="category">RACKS</a>  
-                            <a href="#" name="category">BENCHES</a>
-                            <a href="#" name="category">DUMBBELLS</a>
+                           <form method="GET" id="category_form" name="category_form" action="gallery.php">  
+                            <?php if(!isset($_GET["category"]) || $_GET["category"] == "ALL"){ ?>                                                              
+                                     <button type="submit" class="btn btn-link active" value="ALL" name="category" >ALL</button>
+                                     <?php }else{ ?>
+                                        <button type="submit" class="btn btn-link" value="ALL" name="category" >ALL</button>
+                                        <?php } ?>
+                            <?php
+                                $category_query = "SELECT * FROM `categories`";
+
+                                $category_result = mysqli_query($db_connect,$category_query);
+
+                                while($category = mysqli_fetch_array($category_result,MYSQLI_ASSOC)){ ?>
+
+                                    <?php if(isset($_GET["category"]) && $_GET["category"] ==$category["code"] ) {?>
+                                        <button type="submit" class="btn btn-link active" value='<?php echo $category["code"]; ?>' name='category' > <?php echo $category["code"]; ?> </button>
+                                    <?php }else{ ?>
+                                        <button type="submit" class="btn btn-link" value='<?php echo $category["code"]; ?>' name='category' > <?php echo $category["code"]; ?> </button>
+                                        <?php } ?>
+                             <?php   } ?>
+
+                            
+                           </form>
                     </div>
                 </div>
             </div>
             <div class="row mb-3">
 
                 <?php
-                        include 'configs/db_connect.php';
 
                         $query = "";
 
@@ -76,6 +92,7 @@
                             <span class="product_category">category : <?php echo $product['category_code'] ?></span>
                             <form action="addtocard.php"  method="POST">
                                 <input type="hidden" id="id" name="id" value="<?php echo $product['id']; ?>">
+                                <input type="hidden" id="image_1" name="image_1" value="<?php echo $product['image_1']; ?>">
                                 <input type="hidden" id="code" name="code" value="<?php echo $product['code']; ?>">
                                 <input type="hidden" id="description" name="description" value="<?php echo $product['description']; ?>">
                                 <input type="hidden" id="price" name="price" value="<?php echo $product['selling_price']; ?>">

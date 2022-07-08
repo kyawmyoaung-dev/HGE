@@ -12,8 +12,11 @@
                     <div class="cart">
                         <table class="table table-bordered border-secondary text-white">
                             <tr>
-                                <th>Code</th>
+                                <!-- <th>Code</th> -->
+                                <th></th>
                                 <th>Description</th>
+                                <th>Category</th>
+                                <th>Product Type</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
                                 <th>Amount</th>
@@ -26,8 +29,13 @@
                             ?>
                             <?php foreach($product_list as $key=> $product){  ?>
                                 <tr>
-                                    <td><?php echo $product['code']; ?> </td> 
+                                    <!-- <td><?php echo $product['code']; ?> </td>  -->
+                                    <td>
+                                        <img width="100px" height="100px" src="<?php echo $product['image_1']; ?>" alt="<?php echo $product['description']; ?> ">
+                                    </td>
                                     <td><?php echo $product['description']; ?> </td> 
+                                    <td><?php echo $product['category']; ?> </td> 
+                                    <td><?php echo $product['product_type']; ?> </td> 
                                     <td><?php echo '$ ' . $product['price']; ?> </td> 
                                     <td><?php echo $product['quantity']; ?> </td> 
                                     <td><?php echo '$ ' . $product['amount']; ?> </td> 
@@ -43,7 +51,7 @@
                                 ?>
                             <?php } ?>
                             <tr>
-                                <td class="text-end text-uppercase" colspan="4">Total Amount</td>
+                                <td class="text-end text-uppercase" colspan="6">Total Amount</td>
                                 <td class="text-start" colspan="2"><?php echo '$ ' . $total_price; ?></td>
                             </tr>             
                         </table>

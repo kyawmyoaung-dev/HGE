@@ -57,6 +57,7 @@
                             <span class="product_category">category : <?php echo $product['category_code'] ?></span>
                             <form action="addtocard.php"  method="POST">
                                 <input type="hidden" id="id" name="id" value="<?php echo $product['id']; ?>">
+                                <input type="hidden" id="image_1" name="image_1" value="<?php echo $product['image_1']; ?>">
                                 <input type="hidden" id="code" name="code" value="<?php echo $product['code']; ?>">
                                 <input type="hidden" id="description" name="description" value="<?php echo $product['description']; ?>">
                                 <input type="hidden" id="price" name="price" value="<?php echo $product['selling_price']; ?>">

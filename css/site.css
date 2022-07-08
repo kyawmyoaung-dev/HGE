@@ -625,15 +625,6 @@ header {
     font-size: 2rem;
     font-weight: 700;
 }
-.review_box{
-
-}
-.review_box > * .review_box_img{
-    
-}
-.review_box > * .review_box_content{
-    
-}
 .review_box_content_para{
     color: var(--color-white);
     font-weight: 100;
@@ -799,21 +790,97 @@ header {
     padding: 0.7rem;
     background: var(--color-gray-dark)
 }
-.product_categories > a{
+.product_categories > * button{
     color: var(--color-white);
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 .5rem;
+    background:none;
+    outline: none;
 }
-.product_categories > a:hover{
+.product_categories > * button:hover{
     color: var(--color-red-dark);
 }
 /* .product_categories > a::after{
     content: " / ";
 } */
-.product_categories > a.active{
+.product_categories > * button.active{
     color: var(--color-red-dark);
 }
 /* gallery page end */
+
+
+/* feature page start */
+.feature{
+    background-color: var(--color-gray-light);
+    padding: 1.5rem 0;
+}
+.feature > * .title{
+    color: var(--color-red-light);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+.feature > * .sub_title{
+    color: var(--color-red-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1rem auto;
+}
+.feature_product{
+    background-color: var(--color-gray-dark);
+    padding: 1.5rem;
+}
+.feature_product > h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-red-light);
+    text-transform: capitalize;
+}
+.feature_product > h4{
+    font-size: 0.8rem;
+}
+.feature_product > .sub_title{
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-red-dark);
+}
+.feature_product > p{
+    color: var(--color-white-dark);
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    word-spacing: 2px;
+}
+.feature_category{
+    padding: 0.5rem 0;
+}
+.feature_category >ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.feature_category > ul > li {
+    padding: 0.5rem;
+    background-color: var(--color-gray-dark);
+}
+.feature_category > ul > li:not(:first-child) {
+    margin: .5rem auto;
+}
+.feature_category > * a{
+    font-size: 0.8rem;
+    color: var(--color-white);
+    padding: 0.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.feature_category > * a:hover{
+    color: var(--color-red-dark);
+}
+/* feature page end */

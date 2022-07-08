@@ -25,6 +25,7 @@ if (isset($_POST["add_to_cart_wanted"]) || isset($_POST["add_to_cart_gallery"]))
     $product["price"] = $_POST['price'];
     $product["product_type"] = $_POST['product_type'];
     $product["category"] = $_POST['category'];
+    $product["image_1"] = $_POST['image_1'];
     $product["quantity"] = 1;
     $product["amount"] = $product["quantity"] *  $product["price"];
 
