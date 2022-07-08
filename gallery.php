@@ -87,7 +87,7 @@
                                     <img class="img-thumbnail" src="<?php echo $product['image_1'] ?>" alt="">
                                 </div>
                             <h3 class="product_description"><?php echo $product['description'] ?></h3>
-                            <span class="product_price">Price : <?php echo $product['selling_price'] ?></span>
+                            <span class="product_price">Price : <?php echo '$'. $product['selling_price'] ?></span>
                             <span class="product_code">item code : <?php echo $product['code'] ?></span>
                             <span class="product_category">category : <?php echo $product['category_code'] ?></span>
                             <form action="addtocard.php"  method="POST">
