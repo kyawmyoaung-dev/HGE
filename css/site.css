@@ -651,12 +651,23 @@ header {
 
 .cart_list{
     background-color: var(--color-gray-light);
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 .cart_list > * h3{
     color: var(--color-red-dark);
     font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+.cart > * th{
+    text-transform: uppercase;
+    text-align: center;
     font-weight: 500;
+}
+.cart > * td{
+    font-size: 1.1rem;
 }
 /* shopping cart end */
 

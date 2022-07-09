@@ -45,7 +45,7 @@
                      $result = mysqli_query($db_connect,$query);
                      
                      while($product = mysqli_fetch_array($result,MYSQLI_ASSOC)){ ?>
-                        <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-3 col-sm-12 mb-3">
                             <div class="product_container">
                                 <div class="product_img">
                                     <span class="product_type"><?php echo $product['product_type'] ?></span>
@@ -62,7 +62,7 @@
                                 <input type="hidden" id="price" name="price" value="<?php echo $product['selling_price']; ?>">
                                 <input type="hidden" id="product_type" name="product_type" value="<?php echo $product['product_type']; ?>">
                                 <input type="hidden" id="category" name="category" value="<?php echo $product['category_code']; ?>">
-                                <input type="submit"  name="add_to_cart" class="btn btn_orange" value="add to cart">
+                                <input type="submit"  name="add_to_cart_wanted" class="btn btn_orange" value="add to cart">
                             </form>
                             
                             </div>

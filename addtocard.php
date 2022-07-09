@@ -14,7 +14,7 @@ function search_key($id,$array){
     return null;
 }
 
-if (isset($_POST["add_to_cart"])){
+if (isset($_POST["add_to_cart_wanted"]) || isset($_POST["add_to_cart_gallery"])){
       
     $product_list = [];    
 
@@ -48,6 +48,11 @@ if (isset($_POST["add_to_cart"])){
     
     $_SESSION["item_list"] = $product_list;
 
-    header('location: wanted.php');
+    if(isset($_POST["add_to_cart_wanted"])){
+        header('location: wanted.php');
+    }elseif(isset($_POST["add_to_cart_gallery"])){
+        header('location: gallery.php');
+    }
+    
 }    
 ?>
