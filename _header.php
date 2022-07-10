@@ -16,7 +16,7 @@
     
 <!-- header start  -->
 <header class="sticky-top" id="header">
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand hge_logo" href="#">HGE <sub>Home Gym Equipment</sub></a>
                 <button class="navbar-toggler menu_toggler" type="button" data-bs-toggle="collapse"
@@ -25,7 +25,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 me-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/home.php") ?  'active' : ''); ?> " aria-current="page" href="home.php">Home</a>
                         </li>
@@ -70,6 +70,12 @@
                         </li>
                         <?php }?>
                     </ul>
+                    <?php if(isset($_SESSION['user_name'])){ ?>
+                    <form action="gallery.php" method="GET" class="d-flex me-2" role="search">
+                            <input name="product" id="product" class="form-control form-control-sm form_search me-2" type="text" placeholder="Search">                            
+                            <button class="form_search_button" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                    <?php }?>
                     <?= isset($_SESSION['user_name']) ?  '<span class="user_name">Hello! ' .$_SESSION["user_name"].'</span>'  :  '' ?>
                     
                     <?php if(isset($_SESSION['user_name'])): ?>

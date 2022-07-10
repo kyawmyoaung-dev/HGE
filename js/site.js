@@ -120,8 +120,62 @@ document.querySelector('#register_form').addEventListener('submit',function(e){
     }
 });
 
-function redirect_home_page()
-{
-    alert('reload')
-    location.reload(true);
+function booking_validation(){
+    let result = true;
+    let _form = document.querySelector('#booking_form');
+
+    let first_name = _form.querySelector('#first_name');
+    let last_name = _form.querySelector('#last_name');
+    let email = _form.querySelector('#email');
+    let phone = _form.querySelector('#phone');
+    let booking_time = _form.querySelector('#booking_time');
+    
+
+    if (first_name.value == '' || first_name.value == null) {
+        first_name.setAttribute('placeholder', 'Please enter your first name.');
+        result = false;
+    }
+    if (last_name.value == '' || last_name.value == null) {
+        last_name.setAttribute('placeholder', 'Please enter your last name.');
+        result = false;
+    }
+    if (email.value == '' || email.value == null) {
+        email.setAttribute('placeholder', 'Please enter your email.');
+        result = false;
+    }
+    if (phone.value == '' || phone.value == null) {
+        phone.setAttribute('placeholder', 'Please enter your phone.');
+        result = false;
+    }
+
+    if (booking_time.value == '' || booking_time.value == null) {
+        booking_time.setAttribute('placeholder', 'Please insert booking time.');
+        result = false;
+    }
+    return result;
+}
+
+function contact_us_validation(){
+    let result = true;
+    let _form = document.querySelector('#contact_us_form');
+
+    let name = _form.querySelector('#name');
+    let email = _form.querySelector('#email');
+    let message = _form.querySelector('#message');
+    
+
+    if (name.value == '' || name.value == null) {
+        name.setAttribute('placeholder', 'Please enter your name.');
+        result = false;
+    }
+    if (email.value == '' || email.value == null) {
+        email.setAttribute('placeholder', 'Please enter your email.');
+        result = false;
+    }
+    if (message.value == '' || message.value == null) {
+        message.setAttribute('placeholder', 'Please leave your message.');
+        result = false;
+    }
+
+    return result;
 }

@@ -81,7 +81,41 @@ if(mysqli_query($db_connect,$product_table)){
     echo 'PRODUCTS table created successfully! <br/>';
 }
 
+//contact_us table
+$contact_us_table ="CREATE TABLE CONTACTUS(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(500)  NULL,
+    email VARCHAR(500)  NULL,
+    message VARCHAR(4000)  NULL,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
 
+if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`CONTACTUS`")){
+    echo 'CONTACTUS table drop successfully! <br/>';
+}
+if(mysqli_query($db_connect,$contact_us_table)){
+    echo 'CONTACTUS table created successfully! <br/>';
+}
+
+//booking table
+$booking_table ="CREATE TABLE BOOKING(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(500)  NULL,
+    last_name VARCHAR(500)  NULL,
+    email VARCHAR(500)  NULL,
+    phone VARCHAR(500)  NULL,
+    booking_time datetime NULL,
+    booking_type VARCHAR(500)  NULL,
+    message VARCHAR(4000)  NULL,
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
+if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`BOOKING`")){
+    echo 'BOOKING table drop successfully! <br/>';
+}
+if(mysqli_query($db_connect,$booking_table)){
+    echo 'BOOKING table created successfully! <br/>';
+}
 
 
 ?>

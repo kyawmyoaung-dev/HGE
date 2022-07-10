@@ -1,8 +1,5 @@
 <?php  include_once '_header.php'; ?>
 
-<?php
-
-?>
  <!-- shopping cart start -->
  <div class="cart_list">
         <div class="container">
@@ -60,7 +57,12 @@
             </div>
 
             <div class="mb-3 d-flex justify-content-end">
-                <input type="submit" class="btn btn_orange text-uppercase" value="Check out">
+                <form action="payment.php" method="POST">
+                    <input type="hidden" name="item_count" id="item_count" value="<?php echo count($product_list); ?>" />
+                    <input type="hidden" name="total_amount" id="total_amount" value="<?php echo $total_price; ?>" />
+                    <input type="submit" class="btn btn_orange text-uppercase" value="Check out">
+                </form>
+                
             </div>
         </div>
     </div>

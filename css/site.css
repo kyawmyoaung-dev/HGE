@@ -874,13 +874,101 @@ header {
     margin: .5rem auto;
 }
 .feature_category > * a{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--color-white);
     padding: 0.5rem;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .feature_category > * a:hover{
     color: var(--color-red-dark);
 }
 /* feature page end */
+
+/* payment page start */
+.payment{
+    background-color: var(--color-gray-light);
+    padding: 1.5rem 0;
+}
+.payment > * form{
+    background-color: var(--color-gray-dark);
+    padding: 2.5rem;
+}
+.payment > * .title{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+.payment>* input[type="text"],
+.payment>* input[type="date"],
+.payment>* textarea{
+    border: 1px solid var(--color-red-dark) !important;
+    border-radius: 0;
+}
+
+.payment>* input[type="text"]:focus,
+.payment>* input[type="date"]:focus,
+.payment>* textarea:focus {
+    box-shadow: none;
+}
+/* payment page end */
+
+/* header search bar start */
+.form_search{
+    color: var(--color-white) !important;
+    font-size: 1rem !important;
+    border: 2px solid var(--color-red-dark) !important;
+    background-color: var(--color-gray-dark) !important;
+    border-radius: 3px !important;
+}
+.form_search:focuss{
+    box-shadow: none !important;
+    background-color: var(--color-gray-dark) !important;
+}
+.form_search_button{
+    color: var(--color-red-dark);
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    margin-left: -30px;;
+}
+/* header search bar end */
+
+/* booking seciton start */
+.booking{
+    padding: 1.5rem 0;
+    background-color: var(--color-gray-light);
+}
+.booking >* .title{
+    color: var(--color-red-dark);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.booking_form{
+    background-color: var(--color-gray-dark);
+    padding: 2.5rem;
+}
+.booking_form>* input[type="text"],
+.booking_form>* input[type="email"],
+.booking_form>* input[type="tel"],
+.booking_form>* input[type="datetime-local"],
+.booking_form>* textarea{
+    border: 1px solid var(--color-red-dark) !important;
+    border-radius: 0;
+}
+
+.booking_form>* input[type="text"]:focus,
+.booking_form>* input[type="email"]:focus,
+.booking_form>* input[type="tel"]:focus,
+.booking_form>* input[type="datetime-local"]:focus,
+.booking_form>* textarea:focus {
+    box-shadow: none;
+}
+/* booking seciton end */

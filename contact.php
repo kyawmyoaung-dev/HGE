@@ -1,5 +1,26 @@
 <?php  include '_header.php' ?>
 
+<?php
+    include 'configs/db_connect.php';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $message = $_POST["message"];
+        
+        $query = "INSERT INTO `contactus`(`name`, `email`, `message`) 
+                    VALUES ('$name','$email','$message')";
+    
+        if(mysqli_query($db_connect,$query)){
+            //header('location: gallery.php');
+        }else{
+            session_start();
+            $_SESSION["Message"] = "Contact us message send failed. Please try again.";
+             header('location: message.php');
+        }
+    }
+    
+?>
 
 <!-- contact page start -->
 <div class="contact_us">
@@ -7,18 +28,18 @@
             <h3 class="contact_us_title">contact us</h3>
             <div class="row g-5">
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <form class="contact_us_form" action="">
+                    <form id="contact_us_form" class="contact_us_form" onsubmit="return contact_us_validation()" action="contact.php" method="POST">
                         <div class="mb-3">
                             <label for="">Name</label>
-                            <input class="form-control" required name="name" id="name" type="text">
+                            <input class="form-control"   name="name" id="name" type="text">
                         </div>
                         <div class="mb-3">
                             <label for="">Email</label>
-                            <input class="form-control" required name="email" id="email" type="email">
+                            <input class="form-control"   name="email" id="email" type="email">
                         </div>
                         <div class="mb-3">
                             <label for="">Message</label>
-                            <textarea class="form-control" required name="message" id="message" cols="30" rows="10"></textarea>
+                            <textarea class="form-control"  name="message" id="message" cols="30" rows="10"></textarea>
                         </div>
                         <div class="mb-3">
                             <div class="form-check">

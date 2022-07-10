@@ -44,8 +44,8 @@
                         <h1>quick links</h1>
                         <ul>
                             <li><a href="#header">Login</a></li>
-                            <li><a href="#header">Register</a></li>
-                            <li><a href="home.php#blogs_news">Blogs and News</a></li>
+                            <li><a href="home.php#blogs_news">Blog</a></li>
+                            <li><a href="home.php#booking">Booking</a></li>
                         </ul>
                     </div>
                 </div>

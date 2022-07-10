@@ -110,14 +110,13 @@
                         <h3>BOWLEX MAX TRAINER</h3>
                         <h4>The Best Calories Burner Machine</h4>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur aperiam odio culpa
-                                repellat, dolor maxime voluptate quaerat ut optio eaque ipsum sapiente unde soluta
-                                numquam est ea suscipit accusantium iure.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit explicabo voluptate
-                                delectus impedit expedita, blanditiis dolorem unde soluta? Aspernatur atque delectus non
-                                recusandae fugiat fuga vel id eum. Eum, dolor.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem.</li>
+                            <li>Less time with maximum results</li>
+                            <li>Just 14 minutes a day</li>
+                            <li>2.5x More Calories Burned than Treadmills</li>
                             <li>No.1 Selling Cardio Equipment in USA</li>
+                            <li>High-intensity interval training.</li>
+                            <li>Designed for your comfort.</li>
+                            <li>Includes 1-year JRNY® membership.</li>
                         </ul>
                         <a href="" class="btn btn_orange">full product detail</a>
                     </div>
@@ -222,7 +221,7 @@
 
     <!-- blogs and new start -->
     <div class="blogs" id="blogs_news">
-        <h1>blogs and news</h1>
+        <h1>blog</h1>
         <div class="container">
             <div class="row" id="blogs">
                 <!-- <div class="col-lg-3 col-md-3 col-sm-12">
@@ -243,4 +242,84 @@
         </div>
     </div>
     <!-- blogs and new end -->    
+
+    <!-- booking section start -->
+    <div class="booking" id="booking">
+        <div class="container">
+            <h3 class="title">Booking</h3>
+            <form id="booking_form" action="booking.php" onsubmit="return booking_validation()" method="POST" class="booking_form">
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="first_name" class="form-label">Fist Name</label>
+                            <input id="first_name"  name="first_name" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input id="last_name"  name="last_name" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email"  name="email" type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input id="phone"  name="phone" type="tel" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="booking_time" class="form-label">Booking Time</label>
+                            <input id="booking_time" name="booking_time" type="datetime-local" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="booking_time" class="form-label">What do you prefer.</label>
+                            <div class="d-flex">                               
+                                <div class="form-check me-2">
+                                    <input class="form-check-input" name="booking_type" type="radio" value="face_to_face" id="chk_face_to_face" checked>
+                                    <label class="form-check-label" for="chk_face_to_face">
+                                      Face to face
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" name="booking_type" type="radio" value="online" id="chk_online" >
+                                    <label class="form-check-label" for="chk_online">
+                                      Online
+                                    </label>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="booking_time" class="form-label">Message</label>
+                            <textarea name="message" id="message" class="form-control" cols="30" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" class="btn btn_orange" value="Confirm Booking">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- booking section end -->
+
+
 <?php  include 'footer.php' ?>
