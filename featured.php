@@ -4,7 +4,7 @@
  <div class="feature">
         <div class="container">
             <h3 class="title">Featured Products</h3>
-            <h4 class="sub_title">wearable devices</h4>
+            <h4 class="sub_title">wearable technology</h4>
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-12">
                     <div class="row">

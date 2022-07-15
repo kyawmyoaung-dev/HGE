@@ -10,8 +10,9 @@
                 <div class="search row">
                 
                     <div class="col-lg-4 col-md-4 col-sm-12 d-flex p-0">
-                        <input type="text" id="search" name="search" placeholder="Search Products..." class="form-control search_input me-2">
-                        <input type="submit" class="btn search_button" value="Search">
+                        <input type="text" id="search" name="search" placeholder="Search Products..." class="form-control form_search  me-2">
+                        <!-- <input type="submit" class="btn search_button" value="Search"> -->
+                        <button class="form_search_button" type="submit"><i class="bi bi-search"></i></button>
                     </div>
                     <?php if(isset($_GET['search']) && $_GET['search'] != "") {?>
                     <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center align-items-center">

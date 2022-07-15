@@ -72,7 +72,7 @@
                     </ul>
                     <?php if(isset($_SESSION['user_name'])){ ?>
                     <form action="gallery.php" method="GET" class="d-flex me-2" role="search">
-                            <input name="product" id="product" class="form-control form-control-sm form_search me-2" type="text" placeholder="Search">                            
+                            <input name="product" id="product" value="<?php echo(isset($_GET["product"]) ? $_GET["product"] : ""); ?>" class="form-control form-control-sm form_search me-2" type="text" placeholder="Search">                            
                             <button class="form_search_button" type="submit"><i class="bi bi-search"></i></button>
                     </form>
                     <?php }?>

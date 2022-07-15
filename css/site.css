@@ -6,34 +6,28 @@
     --color-white: #fff;
     --color-white-dark: #adb5bd;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: var(--color-gray-dark);
     font-size: 1rem;
     color: var(--color-white);
 }
-
 /* header style start ------------------------------------------------------- */
 header {
     background-color: var(--color-gray-dark);
 }
-
 .hge_logo {
     color: var(--color-red-dark);
     font-size: 2rem;
     font-weight: 900;
 }
-
 .hge_logo:hover {
     color: var(--color-red-light);
 }
-
 .hge_logo sub {
     color: var(--color-white);
     font-size: 0.7rem;
@@ -496,8 +490,8 @@ header {
     background-color: var(--color-gray-dark);
 }
 .wanted>* .search_input {
-    border: 2px solid var(--color-red-dark);
-    border-radius: 0.2rem;
+    box-shadow: none !important;
+    background-color: var(--color-gray-dark) !important;
 }
 .wanted>* .search_input:focus {
     box-shadow: none;

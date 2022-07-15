@@ -2,7 +2,7 @@
 
 include 'db_connect.php';
 
-//user table
+//users table
 $user_table_query ="CREATE TABLE USERS(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_name VARCHAR(500) NOT NULL,
@@ -13,16 +13,15 @@ $user_table_query ="CREATE TABLE USERS(
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
-//dorp table if exists
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`users`")){
-    echo 'users table drop successfully! <br/>';
+    echo 'Users table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$user_table_query)){
-    echo 'users table created successfully! <br/>';
+    echo 'Users table created successfully! <br/>';
 }
 
 
-//categories table
+//Categories table
 $categories_table_query ="CREATE TABLE CATEGORIES(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     code VARCHAR(500) NOT NULL,
@@ -31,13 +30,13 @@ $categories_table_query ="CREATE TABLE CATEGORIES(
 )";
 
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`CATEGORIES`")){
-    echo 'categories table drop successfully! <br/>';
+    echo 'Categories table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$categories_table_query)){
-    echo 'categories table created successfully! <br/>';
+    echo 'Categories table created successfully! <br/>';
 }
 
-//product type table
+//Product Types table
 $product_type_table ="CREATE TABLE PRODUCTTYPES(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     code VARCHAR(500) NOT NULL,
@@ -46,13 +45,13 @@ $product_type_table ="CREATE TABLE PRODUCTTYPES(
 )";
 
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`PRODUCTTYPES`")){
-    echo 'product_types table drop successfully! <br/>';
+    echo 'Product Types table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$product_type_table)){
-    echo 'product_type table created successfully! <br/>';
+    echo 'Product Types table created successfully! <br/>';
 }
 
-//product  table
+//Products  table
 $product_table ="CREATE TABLE PRODUCTS(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     code VARCHAR(500) NOT NULL,
@@ -75,13 +74,13 @@ $product_table ="CREATE TABLE PRODUCTS(
 )";
 
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`PRODUCTS`")){
-    echo 'PRODUCTS table drop successfully! <br/>';
+    echo 'Products table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$product_table)){
-    echo 'PRODUCTS table created successfully! <br/>';
+    echo 'Products table created successfully! <br/>';
 }
 
-//contact_us table
+//Contact us table
 $contact_us_table ="CREATE TABLE CONTACTUS(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(500)  NULL,
@@ -91,13 +90,13 @@ $contact_us_table ="CREATE TABLE CONTACTUS(
 )";
 
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`CONTACTUS`")){
-    echo 'CONTACTUS table drop successfully! <br/>';
+    echo 'Contact us table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$contact_us_table)){
-    echo 'CONTACTUS table created successfully! <br/>';
+    echo 'Contact us table created successfully! <br/>';
 }
 
-//booking table
+//Booking table
 $booking_table ="CREATE TABLE BOOKING(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(500)  NULL,
@@ -111,10 +110,10 @@ $booking_table ="CREATE TABLE BOOKING(
 )";
 
 if(mysqli_query($db_connect,"DROP TABLE IF EXISTS `home_gym_equipment`.`BOOKING`")){
-    echo 'BOOKING table drop successfully! <br/>';
+    echo 'Booking table drop successfully! <br/>';
 }
 if(mysqli_query($db_connect,$booking_table)){
-    echo 'BOOKING table created successfully! <br/>';
+    echo 'Booking table created successfully! <br/>';
 }
 
 
