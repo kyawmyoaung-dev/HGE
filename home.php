@@ -143,27 +143,45 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="count_item">
-                        <h3>10000+</h3>
+                        <?php
+                            include 'configs/db_connect.php';
+                            $user_count_query = "SELECT COUNT(id) as COUNT FROM `users`;";
+                            $user_count_result = mysqli_query($db_connect,$user_count_query);
+                            if(mysqli_num_rows($user_count_result) > 0 ){
+                                $row = mysqli_fetch_assoc($user_count_result);
+                                $user_count = $row["COUNT"] + 100; 
+                                echo "<h3> $user_count+ </h3>";
+                            }                        
+                        ?>                       
                         <span><i class="bi bi-person-fill"></i> Visitor</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="count_item">
-                        <h3>500+</h3>
+                        <?php
+                            include 'configs/db_connect.php';
+                            $product_count_query = "SELECT COUNT(id) as COUNT FROM `products`;";
+                            $product_count_result = mysqli_query($db_connect,$product_count_query);
+                            if(mysqli_num_rows($product_count_result) > 0 ){
+                                $row = mysqli_fetch_assoc($product_count_result);
+                                $product_cont = $row["COUNT"] + 100; 
+                                echo "<h3> $product_cont+</h3>";
+                            }                        
+                        ?>   
                         <span><i class="bi bi-hammer"></i> Gym Equipments</span>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="count_item">
-                        <h3>200+</h3>
+                        <h3>35+</h3>
                         <span><i class="bi bi-people-fill"></i> Online Instructors</span>
                     </div>
 
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="count_item">
-                        <h3>750+</h3>
+                        <h3>90+</h3>
                         <span><i class="bi bi-person-hearts"></i> Satiesfied Clients</span>
                     </div>
 

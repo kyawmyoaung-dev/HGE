@@ -53,7 +53,8 @@
              session_start();
              if($login_attempt >= 3){              
                 $_SESSION["Message"] = "You have entered an incorrect password too many times and your account is locked. 
-                Please try again after 3 min.";
+                Please try again after 10 min.";
+                setcookie("l_f", $email, time()+ (60*10));
                 header('location: message.php');
              }else{
                 session_start();
