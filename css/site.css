@@ -803,6 +803,11 @@ header {
 .product_categories > * button.active{
     color: var(--color-red-dark);
 }
+.gallery > * .rss{
+    color: var(--color-red-dark);
+    font-size: 1rem;
+    text-decoration: none;
+}
 /* gallery page end */
 
 
@@ -966,3 +971,17 @@ header {
     box-shadow: none;
 }
 /* booking seciton end */
+
+/* rsss start */
+.rss_container{
+    background-color: var(--color-gray-light);
+    padding: 2rem 0;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+.rss_title{
+    text-align: center;
+    color: var(--color-red-dark);
+    margin-bottom: 2rem;
+}
+/* rsss end */

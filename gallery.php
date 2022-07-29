@@ -4,7 +4,11 @@
   <!-- gallery page start -->
   <div class="gallery">
         <div class="container">
+            <div class="d-flex">
             <h3 class="text-center title">Our Products</h3>
+            <a class="rss" href="rss.php" target="_blank">RSS <i class="bi bi-rss"></i> </a>
+            </div>
+            
 
             <div class="row my-3">
                 <div class="col-12">
