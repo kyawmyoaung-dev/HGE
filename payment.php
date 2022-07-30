@@ -4,7 +4,7 @@
  <div class="payment">
         <div class="container">
             <h1 class="title">Payment Process</h1>
-            <form action="">
+            <form action="payment_post.php" method="POST">
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="form-group">
@@ -87,6 +87,8 @@
                         <div class="order_summary">
                             <label>Order Summary</label>
                             <hr>
+                            <input type="hidden" name="total_amount" value="<?php echo '$'. (isset($_POST["total_amount"]) ? $_POST["total_amount"] : 0)  ?>" />
+                            <input type="hidden" name="item_count" value="<?php echo (isset($_POST["item_count"]) ? $_POST["item_count"] : 0)  ?>">
                             <span> <strong>Total Amount (<?php echo (isset($_POST["item_count"]) ? $_POST["item_count"] : 0)  ?> items): </strong> <?php echo '$'. (isset($_POST["total_amount"]) ? $_POST["total_amount"] : 0)  ?></span><br>
                             <span> <strong>Tax : </strong> $ 0 </span>
                         </div>
@@ -94,7 +96,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <input type="submit" class="btn btn_orange" value="Payment">
+                        <input type="submit" name="payment" class="btn btn_orange" value="Payment">
                     </div>
                 </div>
             </form>
