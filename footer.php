@@ -22,20 +22,31 @@
             <div class="row mb-3">
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_logo">
-                        <h1>HGE <sub> Home Gym Equipment</sub></h1>
+                        <h1>HGE <sub> Home Gym Equipment</sub></h1>                    
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_pages">
                         <h1>pages</h1>
                         <ul>
-                            <li><a href="home.php">Home</a></li>
-                            <li><a href="information.php">Information</a></li>
-                            <li><a href="wanted.php">Wanted</a></li>
-                            <li><a href="workshop.php">Workshop</a></li>
-                            <li><a href="gallery.php">Gallery</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="featured.php">Featured</a></li>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/home.php") ?  'active' : ''); ?>" href="home.php">Home</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/home.php") ?  '(You are here)' : ''); ?></b></li>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/information.php") ?  'active' : ''); ?>" href="information.php">Information</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/information.php") ?  '(You are here)' : ''); ?></b></li>
+                           
+                            <?php if(isset($_SESSION['user_name'])){ ?>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/gallery.php") ?  'active' : ''); ?>" href="gallery.php">Gallery</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/gallery.php") ?  '(You are here)' : ''); ?></b></li>
+                            <?php }?>
+
+                            <?php if(isset($_SESSION['user_name'])){ ?>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/wanted.php") ?  'active' : ''); ?>" href="wanted.php">Wanted</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/wanted.php") ?  '(You are here)' : ''); ?></b></li>
+                            <?php }?>
+
+                            <?php if(isset($_SESSION['user_name'])){ ?>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/featured.php") ?  'active' : ''); ?>" href="featured.php">Featured</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/featured.php") ?  '(You are here)' : ''); ?></b></li>
+                            <?php }?>
+
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/workshop.php") ?  'active' : ''); ?>" href="workshop.php">Workshop</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/workshop.php") ?  '(You are here)' : ''); ?></b></li>
+                            <li><a class="<?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/contact.php") ?  'active' : ''); ?>" href="contact.php">Contact</a> <b> <?php echo(strtolower($_SERVER['SCRIPT_NAME']) == strtolower("/HGE/contact.php") ?  '(You are here)' : ''); ?></b></li>
+                            
                         </ul>
                     </div>
                 </div>

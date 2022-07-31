@@ -418,7 +418,12 @@ header {
     text-decoration: none;
     text-transform: capitalize;
 }
-
+.footer_pages>ul>li>a.active{
+    color: var(--color-red-dark);
+}
+.footer_pages>ul>li>a.active + b{
+    color: var(--color-red-dark);
+}
 .footer_pages>ul>li>a:hover,
 .quick_link>ul>li>a:hover,
 .social_links>ul>li>a:hover {
